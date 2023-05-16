@@ -442,7 +442,7 @@ class _HomepageState extends State<Homepage> {
                                 top: h * 0.05,
                                 left: w * 0.08,
                                 child: Text(
-                                  "${categoryNames[index1]}",
+                                  "${categoryNames[index1]} (${categoryImages.length})",
                                   style: TextStyle(
                                       fontSize: 18, color: Colors.white),
                                 ),
