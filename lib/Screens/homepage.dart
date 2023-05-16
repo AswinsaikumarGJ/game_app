@@ -32,48 +32,26 @@ class _HomepageState extends State<Homepage> {
     "assets/gridimage2.jpg",
     "assets/gridimage3.jpg",
     "assets/gridimage4.jpg",
-     "assets/gridimage4.jpg",
-     "assets/gridimage3.jpg",
     "assets/gridimage4.jpg",
-     "assets/gridimage4.jpg",
+    "assets/gridimage3.jpg",
+    "assets/gridimage4.jpg",
+    "assets/gridimage4.jpg",
   ];
-  // final expandedCategoryImages = [
-  //   "assets/gridimage1.jpg",
-  //   "assets/gridimage2.jpg",
-  //   "assets/gridimage3.jpg",
-  //   "assets/gridimage4.jpg",
-  //   "assets/gridimage1.jpg",
-  //   "assets/gridimage2.jpg",
-  //   "assets/gridimage3.jpg",
-  //   "assets/gridimage4.jpg",
-  // ];
   final betPriceRange = [
-   "Min.₹10 | Max.₹100k",
-   "Min.₹10 | Max.₹100k",
-   "Min.₹10 | Max.₹100k",
-   "Min.₹10 | Max.₹100k",
-   "Min.₹10 | Max.₹100k",
     "Min.₹10 | Max.₹100k",
-   "Min.₹10 | Max.₹100k",
-   "Min.₹10 | Max.₹100k",
+    "Min.₹10 | Max.₹100k",
+    "Min.₹10 | Max.₹100k",
+    "Min.₹10 | Max.₹100k",
+    "Min.₹10 | Max.₹100k",
+    "Min.₹10 | Max.₹100k",
+    "Min.₹10 | Max.₹100k",
+    "Min.₹10 | Max.₹100k",
   ];
-  // final expandedBetPriceRange = [
-  //  "Min.₹10 | Max.₹100k",
-  //  "Min.₹10 | Max.₹100k",
-  //  "Min.₹10 | Max.₹100k",
-  //  "Min.₹10 | Max.₹100k",
-  //  "Min.₹10 | Max.₹100k",
-  //  "Min.₹10 | Max.₹100k",
-  //  "Min.₹10 | Max.₹100k",
-  //  "Min.₹10 | Max.₹100k",
-  // ];
   @override
   void initState() {
     final videoID = YoutubePlayer.convertUrlToId(videoURL);
     _controller = YoutubePlayerController(
         initialVideoId: videoID!, flags: YoutubePlayerFlags(autoPlay: false));
-      print(categoryNames.length);
-      print("vbvbv");
     super.initState();
   }
 
@@ -109,13 +87,11 @@ class _HomepageState extends State<Homepage> {
               )),
           Container(
             width: w * 0.3,
-           decoration: BoxDecoration(
-                  gradient: LinearGradient(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
-                    colors: [Colors.orange,Colors.yellow]
-                  )
-                ),
+                    colors: [Colors.orange, Colors.yellow])),
             child: Center(child: Text("Login".tr)),
           )
         ],
@@ -159,84 +135,79 @@ class _HomepageState extends State<Homepage> {
                 height: 20,
               ),
               Container(
-                height: h * 0.1,
-                width: w,
-                decoration: BoxDecoration(
-                    color: Colors.purple,
-                    border: Border.all(
-                      color: Colors.yellow, 
-                      width: 5
-                      )
-                      ),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      top: h * 0.03,
-                      left: w * 0.1,
-                      child: InkWell(
-                        onTap: (){
-                          var locale = Locale('en','US');
-                          Get.updateLocale(locale);
-                        },
-                        child: Text(
-                              "English",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                      ),
-                    ),
-                       Positioned(
-                      top: h * 0.032,
-                      left: w * 0.28,
-                      child: InkWell(
-                        onTap: (){
-                          var locale = Locale('ma','IN');
-                          Get.updateLocale(locale);
-                        },
-                        child: Text(
-                              "മലയാളം",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                      ),
-                    ),
-                       Positioned(
-                      top: h * 0.032,
-                      left: w * 0.5,
-                      child: InkWell(
-                          onTap: (){
-                          var locale = Locale('ta','IN');
-                          Get.updateLocale(locale);
-                        },
-                        child: Text(
-                              "தமிழ்",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                      ),
-                    ),
-                       Positioned(
-                      top: h * 0.033,
-                      left: w * 0.65,
-                      child: InkWell(
-                        onTap: (){
-                           var locale = Locale('te','IN');
-                          Get.updateLocale(locale);
-                        },
-                        child: Text(
-                              "తెలుగు",
-                              style: TextStyle(color: Colors.orange),
-                            ),
-                      ),
-                    ),
-                       Positioned(
-                      top: h * 0.017,
-                      left: w * 0.83,
-                      child: Text(
-                            "...",
-                            style: TextStyle(color: Colors.orange,fontSize: 25),
+                  height: h * 0.1,
+                  width: w,
+                  decoration: BoxDecoration(
+                      color: Colors.purple,
+                      border: Border.all(color: Colors.yellow, width: 5)),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        top: h * 0.03,
+                        left: w * 0.1,
+                        child: InkWell(
+                          onTap: () {
+                            var locale = Locale('en', 'US');
+                            Get.updateLocale(locale);
+                          },
+                          child: Text(
+                            "English",
+                            style: TextStyle(color: Colors.orange),
                           ),
-                    ),
-                  ],
-                )
-              ),
+                        ),
+                      ),
+                      Positioned(
+                        top: h * 0.032,
+                        left: w * 0.28,
+                        child: InkWell(
+                          onTap: () {
+                            var locale = Locale('ma', 'IN');
+                            Get.updateLocale(locale);
+                          },
+                          child: Text(
+                            "മലയാളം",
+                            style: TextStyle(color: Colors.orange),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: h * 0.032,
+                        left: w * 0.5,
+                        child: InkWell(
+                          onTap: () {
+                            var locale = Locale('ta', 'IN');
+                            Get.updateLocale(locale);
+                          },
+                          child: Text(
+                            "தமிழ்",
+                            style: TextStyle(color: Colors.orange),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: h * 0.033,
+                        left: w * 0.65,
+                        child: InkWell(
+                          onTap: () {
+                            var locale = Locale('te', 'IN');
+                            Get.updateLocale(locale);
+                          },
+                          child: Text(
+                            "తెలుగు",
+                            style: TextStyle(color: Colors.orange),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: h * 0.017,
+                        left: w * 0.83,
+                        child: Text(
+                          "...",
+                          style: TextStyle(color: Colors.orange, fontSize: 25),
+                        ),
+                      ),
+                    ],
+                  )),
               SizedBox(
                 height: 20,
               ),
@@ -281,9 +252,7 @@ class _HomepageState extends State<Homepage> {
                   child: Text(
                     "LIVE WITHDRAWAL".tr,
                     style: TextStyle(
-                        letterSpacing: 1.0,
-                        color: Colors.orange,
-                        fontSize: 22),
+                        letterSpacing: 1.0, color: Colors.orange, fontSize: 22),
                   )),
               SizedBox(
                 height: 20,
@@ -411,8 +380,7 @@ class _HomepageState extends State<Homepage> {
                   ProgressBar(
                     isExpanded: true,
                     colors: ProgressBarColors(
-                        playedColor: Colors.purple,
-                        handleColor: Colors.purple),
+                        playedColor: Colors.purple, handleColor: Colors.purple),
                   ),
                   RemainingDuration(
                     controller: _controller,
@@ -433,9 +401,7 @@ class _HomepageState extends State<Homepage> {
                   child: Text(
                     "GAMES".tr,
                     style: TextStyle(
-                        letterSpacing: 1.0,
-                        color: Colors.orange,
-                        fontSize: 28),
+                        letterSpacing: 1.0, color: Colors.orange, fontSize: 28),
                   )),
               SizedBox(
                 height: 20,
@@ -443,131 +409,155 @@ class _HomepageState extends State<Homepage> {
               Container(
                 margin: EdgeInsets.only(left: 20),
                 child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: categoryNames.length,
-                itemBuilder: (context, index1) {
-                  return Container(
-                    height: index1 == selectedindex ? h * 0.76 :  h * 0.42,
-                    width: w * 0.9,
-                    // color: Colors.blue,
-                   margin: EdgeInsets.only(bottom: 20),
-                    child: Container(
-                      child: Stack(
-                        children: [
-                          Positioned(
-                            top: h * 0.03,
-                            left: w * 0.03,
-                            child: Container(
-                              height: 50,
-                              width: 10,
-                              
-                              decoration: BoxDecoration(
-                                     gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: [Colors.orange,Colors.yellow]
-                  ),
-                                  borderRadius: BorderRadius.circular(10)),
-                            ),
-                          ),
-                          Positioned(
-                            top: h * 0.05,
-                            left: w * 0.08,
-                            child: Text("${categoryNames[index1]}",
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white
-                            ),),
-                          ),
-                          Positioned(
-                            top: h * 0.03,
-                            left: w * 0.61,
-                            child: InkWell(
-                              onTap: (){
-                                print("cccccccc");
-                                setState(() {
-                                  if(selectedindex == index1){
-                                    setState(() {
-                                      selectedindex = index1;
-                                      selectedindex = -1;
-                                    });
-                                  }
-                                  else{
-                                    setState(() {
-                                      selectedindex = index1;
-                                    });
-                                  }
-                                });
-                              },
-                              child: Container(
-                                height: 50,
-                                width: w * 0.28,
-                                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    colors: [Colors.orange,Colors.yellow]
-                  ),
- borderRadius: BorderRadius.circular(6)
-                ),
-                        
-                                child:index1 == selectedindex ? Center(child: Text("Hide".tr,style: TextStyle(color: Colors.white),)) : Center(child: Text("Show More".tr,style: TextStyle(color: Colors.white),)),
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: categoryNames.length,
+                    itemBuilder: (context, index1) {
+                      return Container(
+                        height: index1 == selectedindex ? h * 0.76 : h * 0.42,
+                        width: w * 0.9,
+                        // color: Colors.blue,
+                        margin: EdgeInsets.only(bottom: 20),
+                        child: Container(
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                top: h * 0.03,
+                                left: w * 0.03,
+                                child: Container(
+                                  height: 50,
+                                  width: 10,
+                                  decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                          begin: Alignment.bottomCenter,
+                                          end: Alignment.topCenter,
+                                          colors: [
+                                            Colors.orange,
+                                            Colors.yellow
+                                          ]),
+                                      borderRadius: BorderRadius.circular(10)),
+                                ),
                               ),
-                            ),
-                          ),
-                          Positioned(
-                            top: h * 0.12,
-                            child:  Container(
-                              height: h,
-                              width: w * 0.9,
-                              child: GridView.builder(
-                                physics: NeverScrollableScrollPhysics(),
-                                shrinkWrap: true,
-                                        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                                            maxCrossAxisExtent: 200,
-                                            childAspectRatio: 3/2,
-                                            crossAxisSpacing: 20,
-                                            mainAxisSpacing: 20
-                                            ),
+                              Positioned(
+                                top: h * 0.05,
+                                left: w * 0.08,
+                                child: Text(
+                                  "${categoryNames[index1]}",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white),
+                                ),
+                              ),
+                              Positioned(
+                                top: h * 0.03,
+                                left: w * 0.61,
+                                child: InkWell(
+                                  onTap: () {
+                                    setState(() {
+                                      if (selectedindex == index1) {
+                                        setState(() {
+                                          selectedindex = index1;
+                                          selectedindex = -1;
+                                        });
+                                      } else {
+                                        setState(() {
+                                          selectedindex = index1;
+                                        });
+                                      }
+                                    });
+                                  },
+                                  child: Container(
+                                    height: 50,
+                                    width: w * 0.28,
+                                    decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                            begin: Alignment.bottomCenter,
+                                            end: Alignment.topCenter,
+                                            colors: [
+                                              Colors.orange,
+                                              Colors.yellow
+                                            ]),
+                                        borderRadius: BorderRadius.circular(6)),
+                                    child: index1 == selectedindex
+                                        ? Center(
+                                            child: Text(
+                                            "Hide".tr,
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ))
+                                        : Center(
+                                            child: Text(
+                                            "Show More".tr,
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          )),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                  top: h * 0.12,
+                                  child: Container(
+                                    height: h,
+                                    width: w * 0.9,
+                                    child: GridView.builder(
+                                        physics: NeverScrollableScrollPhysics(),
+                                        shrinkWrap: true,
+                                        gridDelegate:
+                                            const SliverGridDelegateWithMaxCrossAxisExtent(
+                                                maxCrossAxisExtent: 200,
+                                                childAspectRatio: 3 / 2,
+                                                crossAxisSpacing: 20,
+                                                mainAxisSpacing: 20),
                                         itemCount: categoryImages.length,
-                                        itemBuilder: (BuildContext ctx, index2) {
+                                        itemBuilder:
+                                            (BuildContext ctx, index2) {
                                           return Container(
                                             alignment: Alignment.center,
                                             decoration: BoxDecoration(
                                                 color: Colors.amber,
-                                                borderRadius: BorderRadius.circular(15)),
+                                                borderRadius:
+                                                    BorderRadius.circular(15)),
                                             child: Column(
                                               children: [
-                                                SizedBox(height: 3,),
+                                                SizedBox(
+                                                  height: 3,
+                                                ),
                                                 Container(
-                                                  height: h * 0.1,
-                                                  width: w * 0.4,
-                                                  decoration: BoxDecoration(
-                                                    borderRadius: BorderRadius.circular(50)
-                                                  ),
-                                                  child: Image.asset("${categoryImages[index2]}",fit: BoxFit.fill,)),
-                                                  SizedBox(
-                                                    height: 3,
-                                                  ),
-                                                  Container(
+                                                    height: h * 0.1,
+                                                    width: w * 0.4,
                                                     decoration: BoxDecoration(
-                                                      color: Colors.purple,
-                                                      borderRadius: BorderRadius.circular(10)
-                                                    ),
-                                                  width: w,
-                                                    child: Center(child: Text("${betPriceRange[index2]}",style: TextStyle(color: Colors.white),)))
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(50)),
+                                                    child: Image.asset(
+                                                      "${categoryImages[index2]}",
+                                                      fit: BoxFit.fill,
+                                                    )),
+                                                SizedBox(
+                                                  height: 3,
+                                                ),
+                                                Container(
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.purple,
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(10)),
+                                                    width: w,
+                                                    child: Center(
+                                                        child: Text(
+                                                      "${betPriceRange[index2]}",
+                                                      style: TextStyle(
+                                                          color: Colors.white),
+                                                    )))
                                               ],
                                             ),
                                           );
                                         }),
-                            )
-                          ), 
-                        ],
-                      ),
-                    ),
-                  );
-                }),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      );
+                    }),
               )
             ],
           ),
